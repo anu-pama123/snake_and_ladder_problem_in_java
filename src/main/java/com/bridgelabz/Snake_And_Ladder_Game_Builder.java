@@ -1,8 +1,8 @@
 package com.bridgelabz;
 
 public class Snake_And_Ladder_Game_Builder {
-    private static void main(String[] arg)
+    public static void main(String[] arg)
     {
-        System.out.println("Welcome to snake and ladder game");
+        System.out.println("Snake and ladder game at start position 0 ");
     }
 }
