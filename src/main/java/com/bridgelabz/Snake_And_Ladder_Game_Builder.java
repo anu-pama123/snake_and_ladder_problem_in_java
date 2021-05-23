@@ -12,9 +12,13 @@ public class Snake_And_Ladder_Game_Builder
         my_dict.put("10", "36");
         my_dict.put("12", "-5");
         my_dict.put("17", "80");
-        while (total <= 100)
+        while (true)
         {
             random_number = (int) (Math.floor((Math.random() * 10)) % 7);
+            if (total+random_number > 100)
+            {
+                continue;
+            }
             total = (total + random_number);
             String temp = String.valueOf(total);
             boolean flag = my_dict.containsKey(temp);
@@ -23,7 +27,7 @@ public class Snake_And_Ladder_Game_Builder
                 total = (total + Integer.valueOf(my_dict.get(temp)));
             }
             System.out.println(total);
-            if (total == 100)
+            if (total >= 100)
             {
                 break;
             }
